@@ -21,6 +21,14 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="form">
+    <%= f.file_field :avatar %>
+  </div>
+
+  <% form_for :user, :html => { :multipart => true } do |f| %>
+    <%= f.file_field :avatar %>
+  <% end %>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
